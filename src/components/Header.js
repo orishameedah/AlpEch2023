@@ -8,11 +8,11 @@ import {staggerContainer, fadeIn} from '../variant'
 // header variants
 const headerVariants = {
   hidden: {
-    padding: '3px 0 9px 0',
+    padding: '0 0 9px 0',
     background: 'none',
   },
   show: {
-    margin: '5px',
+    margin: '4px',
     padding: '10px 0 10px 0',
     background: 'rgb(66, 173, 88)',
     transition: {
