@@ -9,7 +9,7 @@ import {staggerContainer, fadeIn} from '../variant'
 const headerVariants = {
   hidden: {
     padding: '5px 0 9px 0',
-    background: 'rgb(66, 173, 88)',
+    background: 'none',
   },
   show: {
     margin: '5px',
@@ -57,7 +57,7 @@ const Header = () => {
         variants={headerVariants}
         initial='hidden'
         animate={isActive ? 'show' : ''}
-        className='bg-green-200/20 fixed xl:w-full  max-w-[1511px] z-50 py-4'>
+        className='bg-green-200/20 fixed w-full max-w-[1511px] z-50 py-4'>
         <motion.div 
         variants={staggerContainer(0.3, 1)} 
         intial="hidden" 

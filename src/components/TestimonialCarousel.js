@@ -16,15 +16,14 @@ const TestimonialCarousel = () => {
             className='w-full max-w-[1024px] flex items-center justify-center'
         >
         {slider.map((item, index) => {
-            const {image, message, name, occupation} = item;
+            const {image, message, name} = item;
             return (
                 <div className='max-w-[840px] mx-auto px-24 text-white' key={index}>
-                    <div className='text-xl mg-9 lg:text-2xl leading-snug'>{message}</div>
+                    <div className='text-xl mg-9 lg:text-2xl '>{message}</div>
                     <div className='max-w-[70px] lg:max-w-[80px] mx-auto mb-3'>
                         <img src={image} className='rounded-full' alt=''/>
                     </div>
                     <div className='font-bold text-[18px] text-green-500 '>{name}</div>
-                    <div className='font-medium italic'>{occupation}</div>
                 </div>
             )
         })}
