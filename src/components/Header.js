@@ -8,7 +8,7 @@ import {staggerContainer, fadeIn} from '../variant'
 // header variants
 const headerVariants = {
   hidden: {
-    padding: '5px 0 9px 0',
+    padding: '3px 0 9px 0',
     background: 'none',
   },
   show: {
