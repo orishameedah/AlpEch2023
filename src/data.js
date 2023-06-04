@@ -477,21 +477,21 @@ export const testimonialData = {
   slider: [
     {
       message:
-        'AlpEch made healthy eating easy in my busy lifestyle. I love the personal touch of knowing the farmers behind the food I am consuming',
+        'AlpEch made healthy eating easy in my busy lifestyle. ',
       image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685828056/Real-Estate/Apartments/AlpEch/x19ol1m5hooyrv08bi7j.png',
       name: 'Adebara Biola',
       occupation: 'CEO of Great Style',
     },
     {
       message:
-        'AlpEch reconnected me with natures goodness. The taste and freshness of their produce are unparalleled',
+        'AlpEch reconnected me with natures goodness. ',
       image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685828083/Real-Estate/Apartments/AlpEch/hevxcrxaehvepbyadsaq.png',
       name: 'Ngozi Chika',
       occupation: 'Manager at TotalEngeries',
     },
     {
       message:
-        'AlpEch customer service is expectional, always going above and beyond. Their team is friendly, responsive, and ensures my complete satisfaction',
+        'AlpEch customer service is expectional, always going above and beyond.',
       image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685828114/Real-Estate/Apartments/AlpEch/otjruxnxq15fudarhsvv.png',
       name: 'John David.',
       occupation: 'CEO of Delightful',
