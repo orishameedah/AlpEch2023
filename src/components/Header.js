@@ -57,7 +57,7 @@ const Header = () => {
         variants={headerVariants}
         initial='hidden'
         animate={isActive ? 'show' : ''}
-        className='bg-green-200/20 fixed xl:w-full w-[400px] max-w-[1511px] z-50 py-4'>
+        className='bg-green-200/20 fixed xl:w-full w-[320px] max-w-[1511px] z-50 py-4'>
         <motion.div 
         variants={staggerContainer(0.3, 1)} 
         intial="hidden" 
