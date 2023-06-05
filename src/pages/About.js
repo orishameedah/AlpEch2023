@@ -52,7 +52,7 @@ const About = () => {
                     <p className="font-normal text-base leading-6 text-gray-600 mt-6">AlpEch was founded 2006, It was firstly established in Lagos State, in 2012 when it was founded in Ogun State and in 2022 we also founded it in Oyo State. And we still established in more state.</p>
                 </div>
                 <div>
-                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">50M montly enrichments</p>
+                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">100k Farmers</p>
                     <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 </div>
                 <div className="sm:block hidden">
