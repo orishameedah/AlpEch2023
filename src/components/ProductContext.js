@@ -10,7 +10,7 @@ const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState(ProductsData);
   const [state, setState] = useState('Location (any)');
   const [states, setStates] = useState([]);
-  const [productType, setProductType] = useState('Product type (any)');
+  const [productType, setProductType] = useState('Product Item type (any)');
   const [productTypes, setProductTypes] = useState([]);
   const [price, setPrice] = useState('Price range (any)');
   const [loading, setLoading] = useState(false);
@@ -35,7 +35,7 @@ const ProductContextProvider = ({ children }) => {
       });
       // console.log(allCountries);
       // remove duplicates
-      const uniqueProducts = ['Property type (any)', ... new Set(allProducts)]
+      const uniqueProducts = ['Product Item type (any)', ... new Set(allProducts)]
       // console.log(uniqueProperties)
       // set properties states
       setProductTypes(uniqueProducts);
