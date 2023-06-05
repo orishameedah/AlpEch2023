@@ -6,7 +6,7 @@ import Socials from "./Socials";
 
 
 const Footer = () => {
-    return <footer className="relative top-96 h-full flex bg-cover flex-col gap-y-12 z-20 bg-dark lg:bg-transparent lg:min-h-[620px]
+    return <footer className="relative h-full flex bg-cover flex-col gap-y-12 z-20 bg-dark lg:bg-transparent lg:min-h-[620px]
     lg:bg-footer lg:bg-center lg:bg-no-repeat pt-20 ">
         <motion.div variants={staggerContainer} 
         initial= 'hidden'

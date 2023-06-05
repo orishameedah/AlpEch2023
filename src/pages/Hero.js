@@ -1,7 +1,7 @@
 import React from 'react';
 
 import fruitVegetables from '../assets/img/fotor_2023-6-3_10_1_38.jpg'
-import Header from '../components/Header';
+import Footer from '../components/Footer'
 
 // import {menuItems} from '../data'
 
@@ -21,7 +21,6 @@ const Hero = () => {
         <section className='bg-green-200 min-h-[700px] bg-hero bg-cover
         bg-center'>
         {/* header */}
-        <Header />
         <div className='container mx-auto  min-h-[700px]
         flex justify-center items-center 
         '>
@@ -72,7 +71,7 @@ const Hero = () => {
         <motion.div
             variants={fadeIn('left', 'tween', 0.2, 1.8)}
         className='-mb-[100px] 9 w-1000 z-10 '>
-            <img className='w-250 h-120 rounded-full' src={fruitVegetables}/>
+            <img className='w-250 h-120 rounded-full' alt='' src={fruitVegetables}/>
         </motion.div>
     </motion.div>
     </div>
@@ -90,7 +89,9 @@ const Hero = () => {
 
 
         </motion.div> 
-    
+    <div className='pt-96'>
+    <Footer/>
+    </div>
 </>
     )
 }

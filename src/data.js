@@ -1,446 +1,264 @@
-// // import house images
-// import House1 from './assets/img/houses/house1.png';
-// import House2 from './assets/img/houses/house2.png';
-// import House3 from './assets/img/houses/house3.png';
-// import House4 from './assets/img/houses/house4.png';
-// import House5 from './assets/img/houses/house5.png';
-// import House6 from './assets/img/houses/house6.png';
-// import House7 from './assets/img/houses/house7.png';
-// import House8 from './assets/img/houses/house8.png';
-// import House9 from './assets/img/houses/house9.png';
-// import House10 from './assets/img/houses/house10.png';
-// import House11 from './assets/img/houses/house11.png';
-// import House12 from './assets/img/houses/house12.png';
-// // import house large images
-// import House1Lg from './assets/img/houses/house1lg.png';
-// import House2Lg from './assets/img/houses/house2lg.png';
-// import House3Lg from './assets/img/houses/house3lg.png';
-// import House4Lg from './assets/img/houses/house4lg.png';
-// import House5Lg from './assets/img/houses/house5lg.png';
-// import House6Lg from './assets/img/houses/house6lg.png';
-// import House7Lg from './assets/img/houses/house7lg.png';
-// import House8Lg from './assets/img/houses/house8lg.png';
-// import House9Lg from './assets/img/houses/house9lg.png';
-// import House10Lg from './assets/img/houses/house10lg.png';
-// import House11Lg from './assets/img/houses/house11lg.png';
-// import House12Lg from './assets/img/houses/house12lg.png';
-
-// // import apartments images
-// import Apartment1 from './assets/img/apartments/a1.png';
-// import Apartment2 from './assets/img/apartments/a2.png';
-// import Apartment3 from './assets/img/apartments/a3.png';
-// import Apartment4 from './assets/img/apartments/a4.png';
-// import Apartment5 from './assets/img/apartments/a5.png';
-// import Apartment6 from './assets/img/apartments/a6.png';
-// // import apartments large images
-// import Apartment1Lg from './assets/img/apartments/a1lg.png';
-// import Apartment2Lg from './assets/img/apartments/a2lg.png';
-// import Apartment3Lg from './assets/img/apartments/a3lg.png';
-// import Apartment4Lg from './assets/img/apartments/a4lg.png';
-// import Apartment5Lg from './assets/img/apartments/a5lg.png';
-// import Apartment6Lg from './assets/img/apartments/a6lg.png';
-
-// // import agents images
-// import Agent1 from './assets/img/agents/agent1.png';
-// import Agent2 from './assets/img/agents/agent2.png';
-// import Agent3 from './assets/img/agents/agent3.png';
-// import Agent4 from './assets/img/agents/agent4.png';
-// import Agent5 from './assets/img/agents/agent5.png';
-// import Agent6 from './assets/img/agents/agent6.png';
-// import Agent7 from './assets/img/agents/agent7.png';
-// import Agent8 from './assets/img/agents/agent8.png';
-// import Agent9 from './assets/img/agents/agent9.png';
-// import Agent10 from './assets/img/agents/agent10.png';
-// import Agent11 from './assets/img/agents/agent11.png';
-// import Agent12 from './assets/img/agents/agent12.png';
-
-// export const housesData = [
-//   {
-//     id: 1,
-//     type: 'House',
-//     name: 'House 1',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House1,
-//     imageLg: House1Lg,
-//     country: 'United States',
-//     address: '7240C Argyle St. Lawndale, CA 90260',
-//     bedrooms: '6',
-//     bathrooms: '3',
-//     surface: '4200 sq ft',
-//     year: '2016',
-//     price: '110000',
-//     agent: {
-//       image: Agent1,
-//       name: 'Patricia Tullert',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 2,
-//     type: 'House',
-//     name: 'House 2',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House2,
-//     imageLg: House2Lg,
-//     country: 'Canada',
-//     address: '798 Talbot St. Bridgewater, NJ 08807',
-//     bedrooms: '6',
-//     bathrooms: '3',
-//     surface: '4200 sq ft',
-//     year: '2016',
-//     price: '140000',
-//     agent: {
-//       image: Agent2,
-//       name: 'Daryl Hawker',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 3,
-//     type: 'House',
-//     name: 'House 3',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House3,
-//     imageLg: House3Lg,
-//     country: 'United States',
-//     address: '2 Glen Creek St. Alexandria, VA 22304',
-//     bedrooms: '6',
-//     bathrooms: '3',
-//     surface: '4200 sq ft',
-//     year: '2016',
-//     price: '170000',
-//     agent: {
-//       image: Agent3,
-//       name: 'Amado Smith',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 4,
-//     type: 'House',
-//     name: 'House 4',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House4,
-//     imageLg: House4Lg,
-//     country: 'Canada',
-//     address: '84 Woodland St. Cocoa, FL 32927',
-//     bedrooms: '6',
-//     bathrooms: '3',
-//     surface: '4200 sq ft',
-//     year: '2016',
-//     price: '200000',
-//     agent: {
-//       image: Agent4,
-//       name: 'Kaitlyn Gonzalez',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 5,
-//     type: 'House',
-//     name: 'House 5',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House5,
-//     imageLg: House5Lg,
-//     country: 'United States',
-//     address: '28 Westport Dr. Warminster, PA 18974',
-//     bedrooms: '5',
-//     bathrooms: '3',
-//     surface: '4200 sq ft',
-//     year: '2015',
-//     price: '210000',
-//     agent: {
-//       image: Agent5,
-//       name: 'Grover Robinson',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 6,
-//     type: 'House',
-//     name: 'House 6',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House6,
-//     imageLg: House6Lg,
-//     country: 'Canada',
-//     address: '32 Pawnee Street Butte, MT 59701',
-//     bedrooms: '6',
-//     bathrooms: '3',
-//     surface: '6200 sq ft',
-//     year: '2014',
-//     price: '220000',
-//     agent: {
-//       image: Agent6,
-//       name: 'Karen Sorensen',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 7,
-//     type: 'Apartament',
-//     name: 'Apartament 1',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: Apartment1,
-//     imageLg: Apartment1Lg,
-//     country: 'Canada',
-//     address: '32 Pawnee Street Butte, MT 59701',
-//     bedrooms: '2',
-//     bathrooms: '1',
-//     surface: '1200 sq ft',
-//     year: '2012',
-//     price: '20000',
-//     agent: {
-//       image: Agent7,
-//       name: 'Jawhar Shamil Naser',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 8,
-//     type: 'Apartament',
-//     name: 'Apartament 2',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: Apartment2,
-//     imageLg: Apartment2Lg,
-//     country: 'United States',
-//     address: '28 Westport Dr. Warminster, PA 18974',
-//     bedrooms: '3',
-//     bathrooms: '1',
-//     surface: '1000 sq ft',
-//     year: '2011',
-//     price: '30000',
-//     agent: {
-//       image: Agent8,
-//       name: 'Juana Douglass',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 9,
-//     type: 'Apartament',
-//     name: 'Apartament 3',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: Apartment3,
-//     imageLg: Apartment3Lg,
-//     country: 'United States',
-//     address: '84 Woodland St. Cocoa, FL 32927',
-//     bedrooms: '2',
-//     bathrooms: '1',
-//     surface: '1100 sq ft',
-//     year: '2011',
-//     price: '40000',
-//     agent: {
-//       image: Agent9,
-//       name: 'Jerry Schenck',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 10,
-//     type: 'House',
-//     name: 'House 7',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House7,
-//     imageLg: House7Lg,
-//     country: 'Canada',
-//     address: '7240C Argyle St. Lawndale, CA 90260',
-//     bedrooms: '5',
-//     bathrooms: '3',
-//     surface: '3200 sq ft',
-//     year: '2015',
-//     price: '117000',
-//     agent: {
-//       image: Agent10,
-//       name: 'Vera Levesque',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 11,
-//     type: 'House',
-//     name: 'House 8',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House8,
-//     imageLg: House8Lg,
-//     country: 'Canada',
-//     address: '798 Talbot St. Bridgewater, NJ 08807',
-//     bedrooms: '7',
-//     bathrooms: '2',
-//     surface: '2200 sq ft',
-//     year: '2019',
-//     price: '145000',
-//     agent: {
-//       image: Agent11,
-//       name: 'Sofia Gomes',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 12,
-//     type: 'House',
-//     name: 'House 9',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House9,
-//     imageLg: House9Lg,
-//     country: 'United States',
-//     address: '2 Glen Creek St. Alexandria, VA 22304',
-//     bedrooms: '4',
-//     bathrooms: '4',
-//     surface: '4600 sq ft',
-//     year: '2015',
-//     price: '139000',
-//     agent: {
-//       image: Agent12,
-//       name: 'Raymond Hood',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 13,
-//     type: 'House',
-//     name: 'House 10',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House10,
-//     imageLg: House10Lg,
-//     country: 'Canada',
-//     address: '84 Woodland St. Cocoa, FL 32927',
-//     bedrooms: '5',
-//     bathrooms: '2',
-//     surface: '5200 sq ft',
-//     year: '2014',
-//     price: '180000',
-//     agent: {
-//       image: Agent1,
-//       name: 'Patricia Tullert',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 14,
-//     type: 'House',
-//     name: 'House 11',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House11,
-//     imageLg: House11Lg,
-//     country: 'United States',
-//     address: '28 Westport Dr. Warminster, PA 18974',
-//     bedrooms: '5',
-//     bathrooms: '2',
-//     surface: '3200 sq ft',
-//     year: '2011',
-//     price: '213000',
-//     agent: {
-//       image: Agent2,
-//       name: 'Daryl Hawker',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 15,
-//     type: 'House',
-//     name: 'House 12',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: House12,
-//     imageLg: House12Lg,
-//     country: 'Canada',
-//     address: '32 Pawnee Street Butte, MT 59701',
-//     bedrooms: '4',
-//     bathrooms: '3',
-//     surface: '5200 sq ft',
-//     year: '2013',
-//     price: '221000',
-//     agent: {
-//       image: Agent3,
-//       name: 'Amado Smith',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 16,
-//     type: 'Apartament',
-//     name: 'Apartament 16',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: Apartment4,
-//     imageLg: Apartment4Lg,
-//     country: 'Canada',
-//     address: '32 Pawnee Street Butte, MT 59701',
-//     bedrooms: '2',
-//     bathrooms: '1',
-//     surface: '1300 sq ft',
-//     year: '2011',
-//     price: '21000',
-//     agent: {
-//       image: Agent4,
-//       name: 'Kaitlyn Gonzalez',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 17,
-//     type: 'Apartament',
-//     name: 'Apartament 17',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: Apartment5,
-//     imageLg: Apartment5Lg,
-//     country: 'United States',
-//     address: '28 Westport Dr. Warminster, PA 18974',
-//     bedrooms: '3',
-//     bathrooms: '1',
-//     surface: '1000 sq ft',
-//     year: '2012',
-//     price: '32000',
-//     agent: {
-//       image: Agent5,
-//       name: 'Grover Robinson',
-//       phone: '0123 456 78910',
-//     },
-//   },
-//   {
-//     id: 18,
-//     type: 'Apartament',
-//     name: 'Apartament 18',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
-//     image: Apartment6,
-//     imageLg: Apartment6Lg,
-//     country: 'Canada',
-//     address: '84 Woodland St. Cocoa, FL 32927',
-//     bedrooms: '3',
-//     bathrooms: '1',
-//     surface: '1200 sq ft',
-//     year: '2010',
-//     price: '38000',
-//     agent: {
-//       image: Agent6,
-//       name: 'Karen Sorensen',
-//       phone: '0123 456 78910',
-//     },
-//   },
-// ];
-
-// // images
-// import maize from './assets/img/maize.jpg';
-// import animal from './assets/img/animal.jpg';
-// import spicy from './assets/img/spicy.PNG';
-// import rice from './assets/img/nature-food-wallpaper-preview.jpg'
 import ModelWhiteImg from './assets/img/model-white.png';
+
+export const ProductsData = [
+  {
+    id: 1,
+    type: 'Food',
+    name: 'Rice',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685963283/Real-Estate/Apartments/AlpEch/utcgumi4setvbrmtzrp6.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685963424/Real-Estate/Apartments/AlpEch/xd1qdyekeceyuo2vrh6l.png',
+    state: 'Ogun',
+    price: '37000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967570/Real-Estate/Apartments/AlpEch/fzedtw42pfvucacgfiqe.png',
+      name: 'Adekuti Lawson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 2,
+    type: 'Fruit',
+    name: 'Orange',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685963725/Real-Estate/Apartments/AlpEch/wyqu1wzcalhb8wgf38zk.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685963849/Real-Estate/Apartments/AlpEch/qdm4sdqos81kudll8cww.png',
+    state: 'Ogun',
+    price: '14000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967634/Real-Estate/Apartments/AlpEch/hzk05p2ngznzzu9bqxcb.png',
+      name: 'Chike Johnson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 3,
+    type: 'Fruit',
+    name: 'Apple',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685963992/Real-Estate/Apartments/AlpEch/a9meao7capi6isb4wmts.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964071/Real-Estate/Apartments/AlpEch/xixsqpaxxtipmzagwehs.png',
+    state: 'Ogun',
+    price: '18000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967667/Real-Estate/Apartments/AlpEch/yzkhnmgqzfgc59ap0kqk.png',
+      name: 'Olatunji Hameenah',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 4,
+    type: 'Spicy',
+    name: 'Yellow Pepper',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964158/Real-Estate/Apartments/AlpEch/cndogtmdhhfdv2upullq.jpg',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964223/Real-Estate/Apartments/AlpEch/lzehrsl92ikytg9c3l8w.jpg',
+    state: 'Oyo',
+    price: '40000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967667/Real-Estate/Apartments/AlpEch/yzkhnmgqzfgc59ap0kqk.png',
+      name: 'Olatunji Hameenah',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 5,
+    type: 'Vegetables',
+    name: 'Cabbage',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964283/Real-Estate/Apartments/AlpEch/xuufmhru1mh4l73ufeyn.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964335/Real-Estate/Apartments/AlpEch/xkeci6wat1ef1qwsbwc1.jpg',
+    state: 'Lagos',
+    price: '7000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967634/Real-Estate/Apartments/AlpEch/hzk05p2ngznzzu9bqxcb.png',
+      name: 'Chike Johnson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 6,
+    type: 'Food',
+    name: 'Maize Corn',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964419/Real-Estate/Apartments/AlpEch/e4wn9vqlgbfxhqas2yxc.jpg',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964473/Real-Estate/Apartments/AlpEch/bgzcox3ad5akiysid0ds.jpg',
+    state: 'Oyo',
+    price: '36000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967667/Real-Estate/Apartments/AlpEch/yzkhnmgqzfgc59ap0kqk.png',
+      name: 'Olatunji Hameenah',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 7,
+    type: 'Food',
+    name: 'Yam',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964534/Real-Estate/Apartments/AlpEch/hreutq5rft2wak6ha4zg.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964589/Real-Estate/Apartments/AlpEch/ak6yvrfcuzjjq8lzg5fp.jpg',
+    state: 'Ogun',
+    price: '50000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967667/Real-Estate/Apartments/AlpEch/yzkhnmgqzfgc59ap0kqk.png',
+      name: 'Olatunji Hameenah',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 8,
+    type: 'Spicy',
+    name: 'Onions',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964699/Real-Estate/Apartments/AlpEch/ygwpharfc1gjmybc70sx.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685964764/Real-Estate/Apartments/AlpEch/sn3s61kfwamfqpxeaaqm.jpg',
+    state: 'Lagos',
+    price: '30000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967634/Real-Estate/Apartments/AlpEch/hzk05p2ngznzzu9bqxcb.png',
+      name: 'Chike Johnson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 9,
+    type: 'Vegetables',
+    name: 'Lettuce',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965086/Real-Estate/Apartments/AlpEch/msibrnvojm5fm7anjtiu.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965175/Real-Estate/Apartments/AlpEch/nkozagcna13isxxofclt.jpg',
+    state: 'Lagos',
+    price: '20000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967634/Real-Estate/Apartments/AlpEch/hzk05p2ngznzzu9bqxcb.png',
+      name: 'Chike Johnson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 10,
+    type: 'LiveStock',
+    name: 'Cow',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965245/Real-Estate/Apartments/AlpEch/mljqismhtzy4xppjez96.jpg',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965318/Real-Estate/Apartments/AlpEch/a51qkbi2umf1yffd96xi.jpg',
+    state: 'Oyo',
+    price: '80000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967570/Real-Estate/Apartments/AlpEch/fzedtw42pfvucacgfiqe.png',
+      name: 'Adekuti Lawson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 11,
+    type: 'LiveStock',
+    name: 'Chicken',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965484/Real-Estate/Apartments/AlpEch/j0zstyxrludner4l3wao.jpg',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965552/Real-Estate/Apartments/AlpEch/axwxvwhgqycfqvhczvrg.jpg',
+    state: 'Ogun',
+    price: '7000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967570/Real-Estate/Apartments/AlpEch/fzedtw42pfvucacgfiqe.png',
+      name: 'Adekuti Lawson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 12,
+    type: 'Fruit',
+    name: 'Banana',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965695/bhodz6dggiifczliwkfw.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965765/je0dvivmcbd17dejzgau.jpg',
+    state: 'Lagos',
+    price: '30000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967634/Real-Estate/Apartments/AlpEch/hzk05p2ngznzzu9bqxcb.png',
+      name: 'Chike Johnson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 13,
+    type: 'Fruit',
+    name: 'Grapes',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965908/Real-Estate/Apartments/AlpEch/inwh0ysdltherxd4q4si.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685965955/Real-Estate/Apartments/AlpEch/yl9e40tt0fbylk7poczv.jpg',
+    state: 'Lagos',
+    price: '40000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967570/Real-Estate/Apartments/AlpEch/fzedtw42pfvucacgfiqe.png',
+      name: 'Adekuti Lawson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 14,
+    type: 'LiveStock',
+    name: 'Ram',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685966036/Real-Estate/Apartments/AlpEch/qena2qn9um4unhizxt7n.jpg',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685966072/Real-Estate/Apartments/AlpEch/hkm9ostfhqkac3qhee81.jpg',
+    state: 'Oyo',
+    price: '120000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967634/Real-Estate/Apartments/AlpEch/hzk05p2ngznzzu9bqxcb.png',
+      name: 'Chike Johnson',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 15,
+    type: 'Spicy',
+    name: 'Chill Pepper',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685966338/Real-Estate/Apartments/AlpEch/ggvkbre3jt9oldhvwxgg.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685966423/Real-Estate/Apartments/AlpEch/u7ffzd7bytxinmaygvhl.jpg',
+    state: 'Lagos',
+    price: '45000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967667/Real-Estate/Apartments/AlpEch/yzkhnmgqzfgc59ap0kqk.png',
+      name: 'Olatunji Hameenah',
+      phone: '0123 456 78910',
+    },
+  },
+  {
+    id: 16,
+    type: 'Vegetables',
+    name: 'Tomatoes',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
+    image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685966469/Real-Estate/Apartments/AlpEch/yinsekjyscef0iihrqnp.png',
+    imageLg: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685966525/Real-Estate/Apartments/AlpEch/crjyo3yn8enklbwhnbcj.jpg',
+    state: 'Lagos',
+    price: '65000',
+    agent: {
+      image: 'https://res.cloudinary.com/hameedah-images/image/upload/v1685967570/Real-Estate/Apartments/AlpEch/fzedtw42pfvucacgfiqe.png',
+      name: 'Adekuti Lawson',
+      phone: '0123 456 78910',
+    },
+  },
+];
+
 
 export const menuItems= [
   {

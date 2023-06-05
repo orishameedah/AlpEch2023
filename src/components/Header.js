@@ -9,7 +9,7 @@ import {staggerContainer, fadeIn} from '../variant'
 const headerVariants = {
   hidden: {
     padding: '0 0 9px 0',
-    background: 'none',
+    background: 'rgb(66, 173, 88)',
   },
   show: {
     margin: '4px',
@@ -57,7 +57,7 @@ const Header = () => {
         variants={headerVariants}
         initial='hidden'
         animate={isActive ? 'show' : ''}
-        className='bg-green-200/20 fixed xl:w-full w-[320px] max-w-[1511px] z-50 py-4'>
+        className='bg-green-200/20 top-[0] left-[0] xl:w-full lg:w-full fixed md:w-[750px] w-[320px] max-w-[1511px] z-50 py-4'>
         <motion.div 
         variants={staggerContainer(0.3, 1)} 
         intial="hidden" 
@@ -110,3 +110,84 @@ const Header = () => {
 }
 
 export default Header;
+
+
+// import React, { useState } from 'react';
+
+// import link
+// import { Link } from 'react-router-dom';
+// import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+
+// // import logo
+
+
+// const Header = () => {
+//   const [toggle, setToggle] = useState(false);
+
+//   const handleToggle = () => setToggle(!toggle)
+//   return(
+//     <header className='py-3 sticky bg-green-500'>
+//      <div className='container mx-auto flex lg:justify-between justify-around  items-center'>
+//       {/* Logo */}
+//       <Link to='/'>
+//         <img src={logoImg} className='w-[80px] h-[80px]' alt=''/>
+//       </Link>
+
+//       {/* Desktop Nav */}
+//       <div className='hidden md:flex items-center lg:gap-6 gap-3'>
+//         <Link className='hover:text-dark transition text-white' style={{fontWeight: '600'}} to='/about'>
+//           About
+//         </Link>
+//         <Link className='hover:text-dark transition text-white'  style={{fontWeight: '600'}}
+//           to='/product'
+//         >
+//           Product
+//         </Link>
+//         <Link className='hover:text-dark transition text-white'  style={{fontWeight: '600'}}
+//           to='/contact'
+//         >
+//           Contact
+//         </Link>
+//       </div>
+
+//       {/* Mobile Nav  */}
+//       <nav className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav right-0"}
+//           style={{width: 200, zIndex: 1, }}
+//       >
+//         <div className='flex flex-col gap-y-6 mt-2 px-4 '
+//           style={{ fontSize: '1.3em', cursor: 'pointer', 
+//             color: 'white', float: 'left',}}
+//         size={20}>
+//           <Link className='hover:text-violet-900 transition'  to="/">
+//               Home
+//           </Link>
+//         <Link className='hover:text-violet-900 transition' to='/about'>
+//           About
+//         </Link>
+//         <Link  className='hover:text-violet-900 transition'
+//           to='/testimonials'
+//         >
+//           Testimonials
+//         </Link>
+//         <Link className='hover:text-violet-900 transition'
+//         to='/contact'
+//         >
+//           Contact
+//         </Link>
+//           </div>   
+//       </nav>
+
+
+// {/* Toggle button */}
+// <button onClick={handleToggle} className='block  md:hidden'>
+//             {!toggle ? <AiOutlineMenu size={30}/> : <AiOutlineClose size={30}/>}
+//         </button>
+//      </div>
+
+      
+      
+//     </header>
+//   );
+// };
+
+// export default Header;

@@ -5,11 +5,11 @@ import { Routes, Route } from 'react-router-dom';
 
 // import components
 import Header from './components/Header';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 // import pages
 import Hero from './pages/Hero';
-import ProductDetails from './pages/ProductDetails'
+import ProductDetails from './pages/ProductDetails';
 import ProductPage from './pages/ProductsPage';
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -25,7 +25,7 @@ const App = () => {
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
   </div>
   );
 };
