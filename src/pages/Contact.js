@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 
 const Contact = () => {
-  let submitted = useState(false);
+   const [submitted, setSubmitted] = useState(false);
   return(
 <section class="">
 <div class="container my-36 mx-auto md:px-6 mb-32">
@@ -26,17 +26,22 @@ const Contact = () => {
     <div class="grow-0 shrink-0 basis-auto w-full md:w-5/12 px-3 lg:px-6">
       <p class="font-bold mb-6">Make an Enquiry</p>
 
-      <iframe
-          title='myFrame'
+    <iframe
+         title='myFrame'
           name="hidden_iframe"
           id="hidden_iframe"
-          style={{display: "none"}}
-          onLoad={()=>{if(submitted) {window.location="https://alp-ech2023.vercel.app/"}}}
+        style={{ display: "none" }}
+        onLoad={() => {
+          if (submitted) {
+            window.location = "/";
+          }
+        }}
       />
       <form 
       action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfyxre825ENMoSO4ac3K1tFLZKRG1WtfWvHebZPR1f9_izAWQ/formResponse"
       method='post'
       target="hidden_iframe"
+      onSubmit={() => setSubmitted(true)}
       >
         <div class="form-group mb-6">
           <input type="text" class="form-control block
