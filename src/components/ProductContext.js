@@ -15,123 +15,119 @@ const ProductContextProvider = ({ children }) => {
   const [price, setPrice] = useState('Price range (any)');
   const [loading, setLoading] = useState(false);
 
-  // return all countries 
-  useEffect(()=>{
-    const allState = products.map((product)=>{
+  // return all states 
+  useEffect(() => {
+    const allState = products.map((product) => {
       return product.state;
     });
-    // console.log(allCountries);
-    // remove duplicates
-    const uniqueStates = ['Location (any)', ... new Set(allState)]
-    // console.log(uniqueCountries)
-    // set countries states
+    
+    // Fixed: Removed whitespace after spread operator
+    const uniqueStates = ['Location (any)', ...new Set(allState)];
     setStates(uniqueStates);
-  }, []);
+  }, [products]); // Fixed: Added 'products' to dependency array
 
   // return all properties
-    useEffect(()=>{
-      const allProducts = products.map((product)=>{
-        return product.type;
-      });
-      // console.log(allCountries);
-      // remove duplicates
-      const uniqueProducts = ['Product Item type (any)', ... new Set(allProducts)]
-      // console.log(uniqueProperties)
-      // set properties states
-      setProductTypes(uniqueProducts);
-    }, []);
+  useEffect(() => {
+    const allProducts = products.map((product) => {
+      return product.type;
+    });
+    
+    // Fixed: Removed whitespace after spread operator
+    const uniqueProducts = ['Product Item type (any)', ...new Set(allProducts)];
+    setProductTypes(uniqueProducts);
+  }, [products]); // Fixed: Added 'products' to dependency array
 
-    const handleClick = () => {
-      // set loading
-      setLoading(true)
-      // console.log(country, property, price);
+  const handleClick = () => {
+    setLoading(true);
 
-      // create a function that checks if the string includes '(any)'
-      const isDefault = (str) => {
-        return str.split(' ').includes('(any)');
-      };
+    const isDefault = (str) => {
+      return str.split(' ').includes('(any)');
+    };
 
-      // get first value of price and parse it to number
-      const minPrice = parseInt(price.split(' ')[0]);
-      // get seond value of price which is the minimm price and parse it to number
-      const maxPrice = parseInt(price.split(' ')[14]);
+    const minPrice = parseInt(price.split(' ')[0]);
+    // Fixed: Index changed from 14 back to 2 to properly grab the max price string
+    const maxPrice = parseInt(price.split(' ')[2]); 
       
-      const newProduct = products.filter((product)=>{
-        const productPrice = parseInt(product.price);
+    const newProduct = products.filter((product) => {
+      const productPrice = parseInt(product.price);
 
-        // if all values are selected
-        if(product.state === state && product.type === productType && productPrice >= minPrice && productPrice <= maxPrice ){
-          return product;
-        }
+      // if all values are selected
+      if (product.state === state && product.type === productType && productPrice >= minPrice && productPrice <= maxPrice) {
+        return true;
+      }
 
-        // if all values are default
-        if(isDefault(state) && isDefault(productType) && isDefault(price)){
-          return product;
-        }
+      // if all values are default
+      if (isDefault(state) && isDefault(productType) && isDefault(price)) {
+        return true;
+      }
 
-        // if state is not default
-        if(!isDefault(state) && isDefault(productType) && isDefault(price)){
-          return product.state === state;
-        }
+      // if state is not default
+      if (!isDefault(state) && isDefault(productType) && isDefault(price)) {
+        return product.state === state;
+      }
 
-        // if producttype is not default
-        if(!isDefault(productType) && isDefault(state) && isDefault(price)){
-          return product.type === productType
-        }
+      // if producttype is not default
+      if (!isDefault(productType) && isDefault(state) && isDefault(price)) {
+        return product.type === productType;
+      }
 
-        // if price is not default 
-        if(!isDefault(price) && isDefault(state) && isDefault(productType)){
-          if(productPrice >= minPrice && productPrice <= maxPrice){
-            return product;
-          }
-        }
+      // if price is not default 
+      if (!isDefault(price) && isDefault(state) && isDefault(productType)) {
+        return productPrice >= minPrice && productPrice <= maxPrice;
+      }
 
-        // if state & producttype is not default 
-        if(!isDefault(state) && !isDefault(productType) && isDefault(price)){
-          return product.state === state && product.type === productType;
-        }
+      // if state & producttype is not default 
+      if (!isDefault(state) && !isDefault(productType) && isDefault(price)) {
+        return product.state === state && product.type === productType;
+      }
 
-        // if state & price is not default
-        if(!isDefault(state) && isDefault(productType) && !isDefault(price)){
-          if(productPrice >= minPrice && productPrice <= maxPrice){
-            return product.state === state;
-          }
-        }
+      // if state & price is not default
+      if (!isDefault(state) && isDefault(productType) && !isDefault(price)) {
+        return product.state === state && productPrice >= minPrice && productPrice <= maxPrice;
+      }
 
-        // if productype & price is not default
-        if(isDefault(state) && !isDefault(productType) && !isDefault(price)){
-          if(productPrice >= minPrice && productPrice <= maxPrice){
-            return product.type === productType;
-          }
-        }
+      // if productype & price is not default
+      if (isDefault(state) && !isDefault(productType) && !isDefault(price)) {
+        return product.type === productType && productPrice >= minPrice && productPrice <= maxPrice;
+      }
 
-        // if productType & price & state is not default
-        if(!isDefault(state) && !isDefault(productType) && !isDefault(price)){
-          if(productPrice >= minPrice && productPrice <= maxPrice){
-            return product.state === state &&  product.type === productType;
-          }
-        }
-      });
+      // if productType & price & state is not default
+      if (!isDefault(state) && !isDefault(productType) && !isDefault(price)) {
+        return product.state === state && product.type === productType && productPrice >= minPrice && productPrice <= maxPrice;
+      }
 
-      setTimeout(()=>{
-        return newProduct.length < 1 ? setProducts([]) : setProducts(newProduct),
-        setLoading(false)
-      }, 700);
-    }
+      // Fixed: Added a final fallback return statement for the filter method
+      return false;
+    });
 
-  return <ProductContext.Provider value={{
-    state,
-    setState,
-    states,
-    productType,
-    setProductType,
-    productTypes,
-    price,
-    setPrice,
-    products,
-    loading,
-    handleClick,
-  }}>{children}</ProductContext.Provider>
-}
+    setTimeout(() => {
+      // Fixed: Cleaned up the comma operator syntax error into a readable statement block
+      if (newProduct.length < 1) {
+        setProducts([]);
+      } else {
+        setProducts(newProduct);
+      }
+      setLoading(false);
+    }, 700);
+  };
+
+  return (
+    <ProductContext.Provider value={{
+      state,
+      setState,
+      states,
+      productType,
+      setProductType,
+      productTypes,
+      price,
+      setPrice,
+      products,
+      loading,
+      handleClick,
+    }}>
+      {children}
+    </ProductContext.Provider>
+  );
+};
 
 export default ProductContextProvider;
